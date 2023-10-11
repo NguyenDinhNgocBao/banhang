@@ -1,0 +1,436 @@
+body{
+    font-family: 'AR One Sans', sans-serif;
+}
+p{
+    margin: 0;
+
+}
+/*-------Overlay--------*/
+.overlay{
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+.header{
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 98%;
+    height: 50px !important;
+    top: 0;
+    border-bottom: 1px solid #000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left_text{
+    line-height: 36px;
+    text-align: inherit;
+    float: left !important;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.right_text{
+    line-height: 2;
+    float: right !important;
+    margin: 0;
+}
+.top_bar_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-multi-language li{
+    margin: 0 20px;
+    display: inline-block;
+}
+.top-bar-item{
+    list-style: none;
+    position: relative;
+}
+
+.item-language{
+    text-decoration: none;
+    color: #222;
+
+}
+.formLanguage{
+    position: absolute;
+    width: auto !important;
+    height: auto;
+    padding: 8px;
+    background-color: #454848;
+    border-radius: 10px;
+    display: none;
+    z-index: 10;
+}
+.formLanguage-menu{
+    padding: 0;
+    margin: 0;
+    list-style: none !important;
+}
+.formLanguage-menu-item{
+    margin: 0;
+    padding: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+}
+.formLanguage-menu-item:hover{
+    color: #333;
+    font-size: 17px;
+    margin-left: 10px;
+}
+.top-bar-item:hover .formLanguage{
+    display: block;
+}
+.header-multi-account{
+    line-height: 2;
+}
+.menu-item{
+    list-style: none;
+    margin-right: 20px;
+}
+.account{
+    text-decoration: none !important;
+    color: #555;
+}
+.account:hover{
+    cursor: pointer;
+    color: #26b2b2;
+}
+.line-colum{
+    padding: 5px;
+    border-left: 1px solid #ccc;
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+
+
+.nav-bar{
+    width: auto;
+    background-color: #c9dcdc;
+    height: 150px;
+    margin-left: 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.nav-bar-image{
+    max-width: 245px;
+}
+.nav-bar-image-link{
+    text-decoration: none;
+    font-size: 48px;
+    color: #26b2b2;
+}
+.nav-bar-image-logo{
+    color: #26b2b2;
+}
+.nav-bar-menu{
+    margin-left: 20px;
+    right: 20px;
+}
+.nav-bar-menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.nav-bar-menu-list-item{
+    cursor: pointer;
+    margin: 0 16px;
+}
+.nav-bar-menu-list-item-a{
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+}
+.nav-bar-menu-list-item-a:hover{
+    text-decoration: underline;
+    background-color: #ccc;
+    border-radius: 8px;
+    font-size: 26px;
+    padding: 10px 18px;
+    transition: all 0.3s ease;
+}
+.nav-bar-icon-list-item{
+    margin: 0 8px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.nav-bar-icon-list-item:hover{
+    color: #26b2b2;
+    transition: all 0.3s ease;
+}
+
+.image-slider{
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    width: 100%;
+    height: 500px;
+}
+.img_slick-handle{
+    margin-bottom: 20px;
+}
+.img_slick-handle img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.categories{
+    width: 100%;
+    margin: 12px 0;
+}
+.categories-title{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+.categories-menu{
+    margin: 0 62px;
+}
+.categories-menu-list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.categories-menu-item{
+    width: auto !important;
+    height: 100%;
+    margin: 0 6px;
+    cursor: pointer;
+}
+.categories-menu-item h3{
+    text-align: center;
+    margin-top: 8px;
+}
+.bottom{
+    border-bottom: 1px solid #333;
+}
+.rcm{
+    margin-top: 64px;
+}
+.categories-suggest{
+    margin-bottom: 15px;
+}
+.categories-suggest-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.categories-suggest-item{
+    margin: 0 12px;
+    padding: 12px;
+}
+.categories-suggest-item-a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+}
+.border-dashed{
+    border: 2px dashed #26b2b2;
+    border-radius: 20px;
+    background-color: #e0eded;
+    color: #000;
+}
+.menu{
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+}
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* 4 cột có kích thước bằng nhau */
+    grid-template-rows: repeat(3, 450px); /* 3 hàng có kích thước bằng nhau (100px là chiều cao của mỗi hàng) */
+    gap: 16px; /* Khoảng cách giữa các grid item */
+    margin:0 12px;
+}
+.grid-item{
+    padding: 10px;
+    text-align: center;
+}
+.menu-container-item-cart{
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+.menu-container-item-cart-icon{
+    font-size: 24px;
+    padding:0 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #444;
+}
+.menu-container-item-cart-icon:hover{
+    color: #26b2b2;
+    font-size: 25px;
+}
+.item-size-btn{
+    background-color: #c9dcdc;
+    border: 1px solid ;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'AR One Sans', sans-serif;
+    margin: 0 2px;
+}
+.menu-container-item-infor-type{
+    color: #929391;
+    margin-bottom: 10px;
+}
+.menu-container-item-infor-name{
+    text-decoration: none;
+    font-size: 20px;
+    color: #222;
+    padding: 8px;
+}
+.menu-container-item-infor-name:hover{
+    color: #26b2b2;
+    transition: all 0.3s ease-in-out;
+}
+.menu-container-item-infor-price{
+    color: #444;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.menu-container-load{
+    text-align: center;
+    padding: 12px;
+}
+.menu-container-load-btn{
+    background-color: #b4b6b3;
+    padding: 12px;
+    border-radius: 20px;
+    color: #e0eded;
+    cursor: pointer;
+}
+.menu-banner{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+}
+.menu-banner-text{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+}
+.menu-banner-text p, 
+.menu-banner-text h3,
+.menu-banner-text button{
+    margin: 0;
+}
+.menu-banner-text p{
+    font-size: 18px;
+    color: #26b2b2;
+}
+.menu-banner-text h3{
+    font-size: 32px;
+    padding: 12px;
+}
+.menu-banner-text button{
+    padding: 12px;
+    background-color: #26b2b2;
+    font-family: 'AR One Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid ;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+.border-line{
+    width: 100%;
+    border-bottom: 1px solid #333;
+    margin-bottom: 24px;
+}
+.footer-assitant{
+    margin: 32px;
+}
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-container-flex{
+    text-align: center;
+    padding: 0 24px;
+    width: 20%;
+    height: 150px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+.footer-container-flex-content{
+    margin-top: 40px;
+}
+.footer-container-flex-content h2{
+    color: #26b2b2;
+}
+.footer-container-flex-content p{
+    font-size: 16px;
+    font-style: italic;
+    color: #929391;
+}
+.footer-infor{
+    width: 80%;
+    margin: 0 auto;
+}
+.footer-dec{
+    padding: 12px;
+}
+.footer-infor-logo{
+    margin-top: 20px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-dec-content{
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+}
+.footer-social{
+    margin-top: 24px;
+    margin-bottom: 12px;
+    padding: 8px;
+}
+.footer-social-a{
+    font-size: 26px;
+    padding: 0 8px;
+    color: #222;
+}
+.footer-social-a:hover{
+    color: #26b2b2;
+    transition: all 0.5s ease-in-out;
+}
+
+
+

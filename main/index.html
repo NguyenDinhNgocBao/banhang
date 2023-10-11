@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/form.css">
+    <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+
+    <!--ADD TO CART-->
+    <div id="list-cart" class="display shopping-cart">
+        <div class="cart-form">
+            <div class="cart-form-name">
+                <h2>Your Order</h2>
+                <span id="closeBtnCart">
+                    <i class="close fa-solid fa-xmark"></i>
+                </span>
+            </div>
+
+            <div id="list-cart-main">
+                
+            </div>
+
+            <div class="modal-body">     
+                <p>Number of Items:  <span id="quantity-current"></span></p>
+                <p>Total price: <span id="total-cart"></span></p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Order now</button>
+                <button type="button" id="btn-clearAll" class="btn">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <header id="head">
+        <div class="header" id="header">
+            <div class="left_text">
+                <span>
+                    <i class="fa-solid fa-bars"> Add anything here or just remove it...</i>
+                </span>
+            </div>
+            <div class="right_text">
+                <div class="top_bar_menu">
+                    <ul class="header-multi-language">
+                        <li class="top-bar-item">
+                            <a class="item-language" href="">English</a>
+                            <i class="fa-solid fa-caret-down"></i>
+                            <div class="formLanguage">
+                                <ul class="formLanguage-menu">
+                                    <li class="formLanguage-menu-item">VietNam</li>
+                                    <li class="formLanguage-menu-item">English</li>
+                                    <li class="formLanguage-menu-item">More...</li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <span class="line-colum"></span>
+                        <li class="top-bar-item">
+                            <a class="item-language" href="">US Dollar</a>
+                            <i class="fa-solid fa-caret-down"></i>
+                            <div class="formLanguage">
+                                <ul class="formLanguage-menu">
+                                    <li class="formLanguage-menu-item">VietNam(VND)</li>
+                                    <li class="formLanguage-menu-item">America(USD)</li>
+                                    <li class="formLanguage-menu-item">More...</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="header-multi-account">
+                        <li id="account" class="menu-item">
+                            <i class="fa-regular fa-user"></i>
+                            <a class="account">Log In / Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span class="line"></span>
+    </header>
+
+    <!--FORM-->
+    <div id="form" class="form">
+        <div class="name">
+            <h1>Elessi</h1>
+            <span id="closeBtn">
+                <i class="close fa-solid fa-xmark"></i>
+            </span>
+        </div>
+        <div class="great">
+            <h2>
+                Great to have you back!
+            </h2>
+        </div>
+        <form id="Formlogin" class="input-group">
+                <div class="form_user-box">
+                    <input class="form_user-input userNameLog" type="text" name="" required="">
+                    <label>Username or Email</label>
+                </div>
+                <div class="form_user-box c2">
+                    <input class="form_user-input password passwordLog" type="password" name="" required="">
+                    <label>Password</label>
+                </div>
+                <div class="help">
+                    <a href="">Quên mật khẩu</a>
+                    <a href="">Đăng nhập bằng cách khác</a>
+                </div>
+                <div class="social-icons">
+                    <a ><img src="https://i.ibb.co/cFGCL3n/fb.png"></a>
+                    <a><img src="https://i.ibb.co/xfD2qzr/gp.png"></a>
+                    <a><img src="https://i.ibb.co/V3QrpzY/tw.png"></a>                   
+                </div>
+                <div class="panel">
+                    <button class="submit_btn" id="clickLogin">Sign in to your Account</button>
+                </div>
+        </form>
+        
+    </div>
+    
+    <div class="nav-bar">
+       <div class="nav-bar-image">
+            <a class="nav-bar-image-link" href="#head">
+                <img src="image/t-shirt-logo.png" alt="">
+            </a>
+       </div>
+       <div class="nav-bar-menu">
+            <ul class="nav-bar-menu-list">
+                <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="">Home</a></li>
+                <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="#menu">Shop</a></li>
+                <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="#menu">Sales</a></li>
+                <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="#menu">Pages</a></li>
+                <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="#menu">Help</a></li>
+            </ul>
+       </div>
+       <div class="nav-bar-icon">
+            <ul class="nav-bar-icon-list">
+                <i class="nav-bar-icon-list-item fa-solid fa-magnifying-glass"></i>
+                <i class="nav-bar-icon-list-item fa-regular fa-heart"></i>
+                <i id="cartbtn" class="cart-icon nav-bar-icon-list-item fa-solid fa-cart-shopping">
+                    <div class="cart-current"><p id="number-current">0</p></div>
+                </i>
+                <i class="nav-bar-icon-list-item fa-solid fa-list"></i>
+                <i class="nav-bar-icon-list-item fa-solid fa-gear"></i>
+            </ul>
+       </div>
+    </div>
+
+    <main>
+        <!--Image-->
+        <div class="image-slider">
+            <div class="img_slick-handle">
+                <img src="https://th.bing.com/th/id/R.47caed04cd7256b75b89f47908509df1?rik=zVfLimTmrxGJPA&riu=http%3a%2f%2fdslv9ilpbe7p1.cloudfront.net%2fJf7ek-63EP5WqVlMbNmtbQ_store_banner_image.jpeg&ehk=ljAswtnsANo3lytbU%2f7Brh4PS6ffR2u5iP8vpatBw5I%3d&risl=&pid=ImgRaw&r=0" alt="">
+            </div>
+        </div>
+
+        <!--Categories-->
+        <div class="categories bottom">
+            <div class="categories-title">
+                <h1>Featured Categories</h1>
+            </div>
+            <div class="categories-menu">
+                <div class="categories-menu-list">
+                    <div class="categories-menu-item">
+                        <img src="image/Men.jpg" alt="">
+                        <h3>Men</h3>
+                    </div>
+                    <div class="categories-menu-item">
+                        <img src="/image/Women.jpg" alt="">
+                        <h3>Women</h3>
+                    </div>
+                    <div class="categories-menu-item">
+                        <img src="/image/Youth.jpg" alt="">
+                        <h3>Youth & Child</h3>
+                    </div>
+                    <div class="categories-menu-item">
+                        <img src="/image/Home.jpg" alt="">
+                        <h3>Home Decor</h3>
+                    </div>
+                    <div class="categories-menu-item">
+                        <img src="/image/Phone-Case.jpg" alt="">
+                        <h3>Phone Case</h3>
+                    </div>
+                    <div class="categories-menu-item">
+                        <img src="/image/Bags.jpg" alt="">
+                        <h3>Bags</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="categories">
+            <div class="categories-title rcm">
+                <h1>Recommend For You</h1>
+            </div>
+            <div class="categories-suggest">
+                <ul class="categories-suggest-list">
+                    <li class="categories-suggest-item  border-dashed">
+                        <a class="categories-suggest-item-a" href="">Best Seller</a>
+                    </li>
+                    <li class="categories-suggest-item">
+                        <a class="categories-suggest-item-a" href="">Man</a>
+                    </li>
+                    <li class="categories-suggest-item">
+                        <a class="categories-suggest-item-a" href="">Women</a>
+                    </li>
+                    <li class="categories-suggest-item">
+                        <a class="categories-suggest-item-a" href="">On Sale</a>
+                    </li>
+                    <li class="categories-suggest-item">
+                        <a class="categories-suggest-item-a" href="">New</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Menu-->
+        <div id="menu" class="menu">
+            <div class="menu-container">
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="detail.html">
+                            <img class="img" width="220" height="220" src="image/Sample_Product_Image8-24.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Men</p>
+                                <a class="title menu-container-item-infor-name" href="detail.html">Short Sleeved Kaws</a>
+                                <p class="price menu-container-item-infor-price">$45.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">L</button>
+                                <button class="item-size-btn">XL</button>
+                                <button class="item-size-btn">XXL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/Sample_Product_Image3-34.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Women</p>
+                                <a class="menu-container-item-infor-name title" href="">Skrewdriver</a>
+                                <p class="menu-container-item-infor-price price">$50.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">S</button>
+                                <button class="item-size-btn">M</button>
+                                <button class="item-size-btn">L</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/unicorn_ladies_tee_7.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Men</p>
+                                <a class="menu-container-item-infor-name title" href="">Short Sleeved Unicorn</a>
+                                <p class="menu-container-item-infor-price price">$45.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">L</button>
+                                <button class="item-size-btn">XL</button>
+                                <button class="item-size-btn">XXL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/sway-ladies-tee-1.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Men</p>
+                                <a class="menu-container-item-infor-name title" href="">Short Sleeved Sway</a>
+                                <p class="menu-container-item-infor-price price">$30.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">L</button>
+                                <button class="item-size-btn">XL</button>
+                                <button class="item-size-btn">XXL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/Sample_Product_Image5-37.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Men</p>
+                                <a class="menu-container-item-infor-name title" href="">Short Sleeved Sway</a>
+                                <p class="menu-container-item-infor-price price">$45.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">L</button>
+                                <button class="item-size-btn">XL</button>
+                                <button class="item-size-btn">XXL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/Sample_Product_Image8-33.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Youth & Child</p>
+                                <a class="menu-container-item-infor-name title" href="">Short Sleeved Derkslurp</a>
+                                <p class="menu-container-item-infor-price price">$35.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">S</button>
+                                <button class="item-size-btn">M</button>
+                                <button class="item-size-btn">L</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/Sample_Product_Image.4-2-768x768.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Bags</p>
+                                <a class="menu-container-item-infor-name title" href="">Short Sleeved Derkslurp</a>
+                                <p class="menu-container-item-infor-price price">$26.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">S</button>
+                                <button class="item-size-btn">M</button>
+                                <button class="item-size-btn">L</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/Sample_Product_Image8-24.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Men</p>
+                                <a class="menu-container-item-infor-name title" href="">Short Sleeved Kaws</a>
+                                <p class="menu-container-item-infor-price price">$45.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">L</button>
+                                <button class="item-size-btn">XL</button>
+                                <button class="item-size-btn">XXL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/Sample_Product_Image6-1-768x768.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Home Decor</p>
+                                <a class="menu-container-item-infor-name title" href="">Ikat Inspired</a>
+                                <p class="menu-container-item-infor-price price">$26.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">S</button>
+                                <button class="item-size-btn">M</button>
+                                <button class="item-size-btn">L</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/Sample_Product_Image5d-3.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Mugs</p>
+                                <a class="menu-container-item-infor-name title" href="">Drinking Glasses</a>
+                                <p class="menu-container-item-infor-price price">$15.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">L</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/royallyb_ladies_tee_5.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Men</p>
+                                <a class="menu-container-item-infor-name title" href="">Royallyb</a>
+                                <p class="menu-container-item-infor-price price">$55.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">L</button>
+                                <button class="item-size-btn">XL</button>
+                                <button class="item-size-btn">XXL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="menu-container-item">
+                        <a href="">
+                            <img width="220" height="220" class="img" src="image/phone_case-02-1.jpg" alt="">
+                        </a>
+                        <div class="menu-container-item-cart">
+                            <i id="add-to-cart" class="add-to-cart menu-container-item-cart-icon fa-solid fa-cart-plus"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-heart"></i>
+                            <i class="menu-container-item-cart-icon fa-regular fa-comment-dots"></i>
+                        </div>
+                        <div class="menu-container-item-infor">
+                            <div>
+                                <p class="menu-container-item-infor-type">Phone Cases</p>
+                                <a class="menu-container-item-infor-name title" href="">Lurcher</a>
+                                <p class="menu-container-item-infor-price price">$20.00</p>
+                            </div>
+                            <div class="item-size">
+                                <button class="item-size-btn">Ip13</button>
+                                <button class="item-size-btn">Ip14</button>
+                                <button class="item-size-btn">Ip15</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container-load">
+                <span class="menu-container-load-btn">Load More...</span>
+            </div>
+
+            <div class="menu-banner">
+                <div class="menu-banner-text">
+                    <p>
+                        New Design
+                    </p>
+                    <h3>
+                        Up to <span style="color: #26b2b2;">50% Off All T-Shirt</span>
+                    </h3>
+                    <button>Shop Now</button>
+                </div>
+                <img class="menu-banner-img" width="100%" src="image/Banner_04.jpg" alt="">
+            </div>
+            <div class="border-line">
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-assitant">
+            <div class="footer-container">
+                <div class="footer-container-flex">
+                    <div class="footer-container-flex-content">
+                        <h2>FREE SHIPPING <i class="fa-solid fa-truck"></i></h2>
+                        <p>Free shipping for all US order</p>
+                    </div>
+                </div>
+                <div class="footer-container-flex">
+                    <div class="footer-container-flex-content">
+                        <h2>SUPPORT 24/7 <i class="fa-solid fa-phone"></i></h2>
+                        <p>We support 24 hours a day</p>
+                    </div>
+                </div>
+                <div class="footer-container-flex">
+                    <div class="footer-container-flex-content">
+                        <h2>100% MONEY BACK <i class="fa-solid fa-rotate-left"></i></h2>
+                        <p>You have 30 days to return</p>
+                    </div>
+                </div>
+                <div class="footer-container-flex">
+                    <div class="footer-container-flex-content">
+                        <h2>PAYMENT SECURE <i class="fa-solid fa-credit-card"></i></h2>
+                        <p>We ensure secure payment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="footer-infor">
+            <div class="footer-dec">
+                <div class="footer-infor-logo">
+                    <img src="image/t-shirt-logo.png" alt="">
+                </div>
+                <div class="footer-dec-content">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+                    </p>
+                    <div class="footer-social">
+                        <a class="footer-social-a" href=""><i class="fa-regular fa-envelope"></i></a>
+                        <a class="footer-social-a" href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a class="footer-social-a" href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a class="footer-social-a" href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <p>
+                        Privacy & CookiesTerms & ConditionsAccessibilityAbout Us
+                    </p>
+                    <p>
+                        © 2023 Nasatheme - All Right reserved!
+                    </p>
+                </div>
+            </div>
+       </div>
+    </footer>
+    <script src="/JS/style.js"></script>
+    <script src="/JS/cart.js"></script>
+</body>
+</html>

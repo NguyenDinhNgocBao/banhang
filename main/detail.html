@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="/style/detail.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/form.css">
+    <link rel="stylesheet" href="/style/cart.css">
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+
+    <!--ADD TO CART-->
+    <div id="list-cart" class="display shopping-cart">
+        <div class="cart-form">
+            <div class="cart-form-name">
+                <h2>Your Order</h2>
+                <span id="closeBtnCart">
+                    <i class="close fa-solid fa-xmark"></i>
+                </span>
+            </div>
+
+            <div id="list-cart-main">
+                
+            </div>
+
+            <div class="modal-body">     
+                <p>Number of Items:  <span id="quantity-current"></span></p>
+                <p>Total price: <span id="total-cart"></span></p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Order now</button>
+                <button type="button" id="btn-clearAll" class="btn">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <header id="head">
+        <div class="header" id="header">
+            <div class="left_text">
+                <span>
+                    <i class="fa-solid fa-bars"> Add anything here or just remove it...</i>
+                </span>
+            </div>
+            <div class="right_text">
+                <div class="top_bar_menu">
+                    <ul class="header-multi-language">
+                        <li class="top-bar-item">
+                            <a class="item-language" href="">English</a>
+                            <i class="fa-solid fa-caret-down"></i>
+                            <div class="formLanguage">
+                                <ul class="formLanguage-menu">
+                                    <li class="formLanguage-menu-item">VietNam</li>
+                                    <li class="formLanguage-menu-item">English</li>
+                                    <li class="formLanguage-menu-item">More...</li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <span class="line-colum"></span>
+                        <li class="top-bar-item">
+                            <a class="item-language" href="">US Dollar</a>
+                            <i class="fa-solid fa-caret-down"></i>
+                            <div class="formLanguage">
+                                <ul class="formLanguage-menu">
+                                    <li class="formLanguage-menu-item">VietNam(VND)</li>
+                                    <li class="formLanguage-menu-item">America(USD)</li>
+                                    <li class="formLanguage-menu-item">More...</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="header-multi-account">
+                        <li id="account" class="menu-item">
+                            <i class="fa-regular fa-user"></i>
+                            <a class="account">Log In / Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <span class="line"></span>
+    </header>
+    <!--FORM-->
+    <div id="form" class="form">
+        <div class="name">
+            <h1>Elessi</h1>
+            <span id="closeBtn">
+                <i class="close fa-solid fa-xmark"></i>
+            </span>
+        </div>
+        <div class="great">
+            <h2>
+                Great to have you back!
+            </h2>
+        </div>
+        <form id="Formlogin" class="input-group">
+                <div class="form_user-box">
+                    <input class="form_user-input userNameLog" type="text" name="" required="">
+                    <label>Username or Email</label>
+                </div>
+                <div class="form_user-box c2">
+                    <input class="form_user-input password passwordLog" type="password" name="" required="">
+                    <label>Password</label>
+                </div>
+                <div class="help">
+                    <a href="">Quên mật khẩu</a>
+                    <a href="">Đăng nhập bằng cách khác</a>
+                </div>
+                <div class="social-icons">
+                    <a ><img src="https://i.ibb.co/cFGCL3n/fb.png"></a>
+                    <a><img src="https://i.ibb.co/xfD2qzr/gp.png"></a>
+                    <a><img src="https://i.ibb.co/V3QrpzY/tw.png"></a>                   
+                </div>
+                <div class="panel">
+                    <button class="submit_btn" id="clickLogin">Sign in to your Account</button>
+                </div>
+        </form>
+        
+    </div>
+
+    <!--Nav-->
+    <div class="nav-bar">
+        <div class="nav-bar-image">
+             <a class="nav-bar-image-link" href="#head">
+                 <img src="/image/t-shirt-logo.png" alt="">
+             </a>
+        </div>
+        <div class="nav-bar-menu">
+             <ul class="nav-bar-menu-list">
+                 <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="">Home</a></li>
+                 <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="#menu">Shop</a></li>
+                 <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="#menu">Sales</a></li>
+                 <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="#menu">Pages</a></li>
+                 <li class="nav-bar-menu-list-item"><a class="nav-bar-menu-list-item-a" href="#menu">Help</a></li>
+             </ul>
+        </div>
+        <div class="nav-bar-icon">
+             <ul class="nav-bar-icon-list">
+                 <i class="nav-bar-icon-list-item fa-solid fa-magnifying-glass"></i>
+                 <i class="nav-bar-icon-list-item fa-regular fa-heart"></i>
+                 <i id="cartbtn" class="cart-icon nav-bar-icon-list-item fa-solid fa-cart-shopping">
+                     <div class="cart-current"><p id="number-current">0</p></div>
+                 </i>
+                 <i class="nav-bar-icon-list-item fa-solid fa-list"></i>
+                 <i class="nav-bar-icon-list-item fa-solid fa-gear"></i>
+             </ul>
+        </div>
+    </div>
+
+    <main>
+        <!--Image-->
+        <div class="img-detail">
+            <div class="img-detail-text">
+                <h3>Short Sleeved Kaws</h3>
+            </div>
+            <img class="img-border" src="/image/elessi-bg2.jpg" alt="">
+        </div>
+        <div class="main-container">
+            <div class="main-container-img">
+                <div><img src="/image/Sample_Product_Image8-24.jpg" alt=""></div>
+                <div><img src="/image/Sample_Product_Image-Recovered-28.jpg" alt=""></div>
+            </div>
+            <div class="main-container-content">
+                <div class="main-container-content-item">
+                    <h3 class="main-container-content-item-name">Short Sleeved Kaws</h3>
+                    <img class="main-container-content-item-brand" src="/image/monanican-brand.png" alt="">
+                    <p class="main-container-content-item-price">45.00$</p>
+                    <p class="main-container-content-item-fire"><i class="fa-solid fa-fire"></i> 7 sold in last 7 hour</p>
+                    <p class="main-container-content-item-title">Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.</p>
+                    <div class="main-container-content-item-style">
+                        <p>STYLE: LADIES-TEE</p>
+                        <div class="main-container-content-item-style-type">
+                            <div class="border-choice main-container-content-item-style-type-item">
+                                <span>
+                                    <img class="border-img" src="/image/Sample_Product_Image8-24.jpg" width="100" height="100" alt="">
+                                </span>
+                                <span class="main-container-content-item-style-type-item-name">
+                                    <p>Ladies-Tee</p>
+                                </span>
+                            </div>
+                            <div class=" main-container-content-item-style-type-item">
+                                <span>
+                                    <img class="border-img" src="/image/Sample_Product_Image5-4-150x150.jpg" width="100" height="100" alt="">
+                                </span>
+                                <span class="main-container-content-item-style-type-item-name">
+                                    <p>Sweater</p>
+                                </span>
+                            </div>
+                            <div class=" main-container-content-item-style-type-item">
+                                <span>
+                                    <img class="border-img" src="/image/Sample_Product_Image2-4-150x150.jpg" width="100" height="100" alt="">
+                                </span>
+                                <span class="main-container-content-item-style-type-item-name">
+                                    <p>T-Shirt</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="main-container-content-item-size">
+                        <p>SIZE</p>
+                        <button class="border-choice">M</button>
+                        <button>L</button>
+                        <button>XL</button>
+                    </div>
+                    <div class="main-container-content-item-select">
+                        <div class="main-container-content-item-quantity">
+                            <button class="plus" href="">+</button>
+                            <input class="input" type="number" value="1">
+                            <button class="minus" href="">-</button>
+                        </div>
+                        <div class="main-container-content-item-select-btn">
+                            <button class="add-to-cart btnCart">Add to Cart</button>
+                            <button class="btnBuy">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="main-container-content-item-help">
+                        <div class="main-container-content-item-help-support">
+                            <a href="#"><i class="fa-solid fa-table"></i> Size Guide</a>
+                            <a href="#"><i class="fa-solid fa-truck"></i> Delivery & Return</a>
+                            <a href="#"><i class="fa-solid fa-question"></i> Ask a Question</a>
+                        </div>
+                        <div class="main-container-content-item-help-time">
+                            <p><i class="fa-solid fa-clock"></i>
+                                Estimated Delivery:
+                                 Oct 12 – Oct 16</p>
+                        </div>
+                        <div class="">
+                            <p><i class="fa-regular fa-face-smile"></i> 
+                                18 people are viewing this right now</p>
+                        </div>
+                        <div class="main-container-content-item-help-social">
+                            <a href="#"><i class="fa-solid fa-share-nodes"></i></a>
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                        <img width="100%" style="margin-top: 112px;" src="/image/trust_badge.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-dec">
+            <h2>Description</h2>
+            <p>
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.
+            </p>
+            <p>
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <img width="100%" style="margin-top: 32px;" src="/image/product-desc-pin3.jpg" alt="">
+        </div>
+    </main>
+    <footer>
+        <div class="footer-assitant">
+            <div class="footer-container">
+                <div class="footer-container-flex">
+                    <div class="footer-container-flex-content">
+                        <h2>FREE SHIPPING <i class="fa-solid fa-truck"></i></h2>
+                        <p>Free shipping for all US order</p>
+                    </div>
+                </div>
+                <div class="footer-container-flex">
+                    <div class="footer-container-flex-content">
+                        <h2>SUPPORT 24/7 <i class="fa-solid fa-phone"></i></h2>
+                        <p>We support 24 hours a day</p>
+                    </div>
+                </div>
+                <div class="footer-container-flex">
+                    <div class="footer-container-flex-content">
+                        <h2>100% MONEY BACK <i class="fa-solid fa-rotate-left"></i></h2>
+                        <p>You have 30 days to return</p>
+                    </div>
+                </div>
+                <div class="footer-container-flex">
+                    <div class="footer-container-flex-content">
+                        <h2>PAYMENT SECURE <i class="fa-solid fa-credit-card"></i></h2>
+                        <p>We ensure secure payment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <div class="footer-infor">
+            <div class="footer-dec">
+                <div class="footer-infor-logo">
+                    <img src="/image/t-shirt-logo.png" alt="">
+                </div>
+                <div class="footer-dec-content">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+                    </p>
+                    <div class="footer-social">
+                        <a class="footer-social-a" href=""><i class="fa-regular fa-envelope"></i></a>
+                        <a class="footer-social-a" href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a class="footer-social-a" href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a class="footer-social-a" href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <p>
+                        Privacy & CookiesTerms & ConditionsAccessibilityAbout Us
+                    </p>
+                    <p>
+                        © 2023 Nasatheme - All Right reserved!
+                    </p>
+                </div>
+            </div>
+       </div>
+    </footer>
+    <script src="/JS/style.js"></script>
+    <script src="/JS/cart.js"></script>
+</body>
+</html>

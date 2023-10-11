@@ -1,0 +1,156 @@
+/*----------FORM------------*/
+input:focus{
+    font-family: 'Kanit', sans-serif;
+}
+.form{
+    display: none;
+    z-index: 100000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 500px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 2px solid #26b2b2;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    padding: 8px 20px;
+}
+.name h1{
+    font-size: 32px;
+    margin: 0;
+}
+.close{
+    cursor: pointer;
+    size: 24px;
+}
+.great h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-group{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    margin-top: 30px;
+}
+.form_user-box{
+    position: relative;
+    padding: 10px;
+}
+.c2{
+    width: 90%;
+    position: relative;
+}
+.c3{
+    width: 90%;
+    position: relative;
+    margin-top: 40px;
+}
+.form_user-input{
+    width: 95%;
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 50px;
+}
+.password{
+    position: absolute;
+    width: 98%;
+}
+.form .form_user-box span{
+    display: flex;
+    align-items: center;
+}
+.form .form_user-box label{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    pointer-events: none;
+    transition: .5s;
+}
+.form .form_user-box input:focus ~ label,
+.form .form_user-box input:valid ~ label{
+    top: -25px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+.eyes{
+    position: absolute;
+    align-items: center;
+    right: 0;
+    width: 10%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+}
+.eyeHandle{
+    display: none;
+}
+.help{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    font-size: 12px;
+}
+.help a{
+    color: #c10b30;
+}
+.social-icons{
+    margin: 20px auto;
+    text-align: center;
+}
+.social-icons img{
+    width: 50px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #26b2b2;
+    cursor: pointer;
+    border-radius: 50%;
+}
+/*---------SUBMIT BUTTON------------*/
+.panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit_btn{
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    outline: none;
+    border-style: none;
+    transition: all 0.3s linear;
+    transform: scale(0.9);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    font-weight: 500px;
+    background: #26b2b2;
+}
+.submit_btn:hover{
+    transform: scale(1);
+}
